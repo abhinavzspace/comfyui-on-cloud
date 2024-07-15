@@ -3,6 +3,8 @@ sudo apt-get install libgoogle-perftools4 libtcmalloc-minimal4 -y
 cd ~/
 
 wget -q https://raw.githubusercontent.com/AUTOMATIC1111/stable-diffusion-webui/master/webui.sh
+chmod +x webui.sh
+./webui.sh &
 
 # REFERENCE: https://stackoverflow.com/a/5789674/1019748
 # Get last executed process's PID
