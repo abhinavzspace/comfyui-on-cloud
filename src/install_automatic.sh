@@ -28,7 +28,7 @@ Description=Automatic1111 Server
 
 [Service]
 Type=simple
-ExecStart=bash $(pwd)/webui.sh -f
+ExecStart=$(pwd)/webui.sh
 
 
 

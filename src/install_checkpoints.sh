@@ -7,6 +7,7 @@ mkdir -p ./models/ipadapter/
 mkdir -p ./models/upscale_models/
 mkdir -P ./models/insightface/models/antelopev2/
 mkdir -P ./models/instantid/
+mkdir -P ./models/controlnet/
 
 
 #sd_xl and refiner
