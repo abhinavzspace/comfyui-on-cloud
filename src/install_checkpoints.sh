@@ -8,6 +8,7 @@ mkdir -p ./models/upscale_models/
 mkdir -P ./models/insightface/models/antelopev2/
 mkdir -P ./models/instantid/
 mkdir -P ./models/controlnet/
+mkdir -P ./models/vitmatte/
 
 
 #sd_xl and refiner
@@ -135,7 +136,15 @@ wget https://huggingface.co/uwg/upscaler/resolve/main/ESRGAN/4x_NickelbackFS_720
 #wget https://github.com/ChaoningZhang/MobileSAM/blob/master/weights/mobile_sam.pt -P ./models/sams/
 
 #instantid
-wget https://huggingface.co/MonsterMMORPG/tools/resolve/main/antelopev2.zip -P ./models/insightface/models/antelopev2/
-unzip ./models/insightface/models/antelopev2/antelopev2.zip ./models/insightface/models/antelopev2/
+wget https://huggingface.co/MonsterMMORPG/tools/resolve/main/antelopev2.zip -P ./models/insightface/models/
+unzip ./models/insightface/models/antelopev2.zip -d ./models/insightface/models/
 wget https://huggingface.co/InstantX/InstantID/resolve/main/ip-adapter.bin -P ./models/instantid/
-wget https://huggingface.co/InstantX/InstantID/resolve/main/ControlNetModel/diffusion_pytorch_model.safetensors ./models/controlnet/
+wget https://huggingface.co/InstantX/InstantID/resolve/main/ControlNetModel/diffusion_pytorch_model.safetensors -P ./models/controlnet/
+
+#FOOOOCUS INPAINT
+wget https://github.com/Sanster/models/releases/download/add_big_lama/big-lama.pt -P ./models/inpaint/
+
+#LayerStyle vitmatte
+wget https://huggingface.co/hustvl/vitmatte-small-composition-1k/resolve/main/config.json -P ./models/vitmatte/
+wget https://huggingface.co/hustvl/vitmatte-small-composition-1k/resolve/main/model.safetensors -P ./models/vitmatte/
+wget https://huggingface.co/hustvl/vitmatte-small-composition-1k/resolve/main/preprocessor_config.json -P ./models/vitmatte/
